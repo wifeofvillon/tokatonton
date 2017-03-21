@@ -9,13 +9,6 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link rel="stylesheet" href="./css/main.css">
-    <!--Import jQuery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <!-- Import Materialize -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <!-- Import Chart.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script type="text/javascript" src="./js/graph-option.js"></script>
   </head>
   <body>
     <nav class="nav-wrapper">
@@ -38,41 +31,93 @@
     <section id="main">
       <h2 class="header">島崎藤村</h2>
       <div class="input-area">
-        <div class="">
-          <select class="input-field" name="point-3th">
-            <option>0</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-          </select>
+        <div class="row">
+          <form class="" action="index.html" method="post">
+            <div class="add-score col">
+              <p>追加得点</p>
+              <div class="input-field">
+                <select class="browser-default col" name="point-3st" id="point-3st">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                </select>
+                <select class="browser-default col" name="point-2st" id="point-2st">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+                <select class="browser-default col" name="point-1st" id="point-1st">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+            </div>
+            <p class="col">
+              <i class="material-icons">input</i>
+            </p>
+            <div class="total-score col">
+              <p>合計得点</p>
+              <div class="input-field">
+                <select class="browser-default col" name="total-4st" id="total-4st">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                </select>
+                <select class="browser-default col" name="total-3st" id="total-3st">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+                <select class="browser-default col" name="total-2st" id="total-2st">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+                <select class="browser-default col" name="total-1st" id="total-1st">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-      <canvas id="graph" height="56"></canvas>
-      <script type="text/javascript">
-        var ctx = document.getElementById("graph");
-        var myChart = new Chart(ctx, {
-          type: 'horizontalBar',
-          data: {
-            labels: ["想魂(大)","語魂(大)","島崎藤村第四衣装","文魂(大)"],
-            datasets: [{
-              data: [84,53,12, 100],
-              backgroundColor: [
-                '#8bc34a',
-                '#ffd54f',
-                '#e57373',
-                '#4db6ac'
-              ]
-            }]
-          },
-          options: graphOption
-        });
-      </script>
+      <canvas id="graph"></canvas>
     </section>
     <section id="disclaimer">
       <h2 class="header">免責事項</h2>
@@ -90,5 +135,36 @@
         Twitter：<a href="//twitter.com/wifeofvillon">@wifeofvillon<i class="material-icons tiny">open_in_new</i></a>
       </p>
     </section>
+    <!--Import jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Import Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <!-- Import Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script type="text/javascript" src="./js/master.js"></script>
+    <script type="text/javascript" src="./js/graph.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        console.log(master.character[0].name);
+        $('select').material_select();
+      });
+      var ctx = document.getElementById("graph");
+      var myChart = new Chart(ctx, {
+        type: 'horizontalBar',
+        data: {
+          labels: ["想魂(大)","語魂(大)","島崎藤村第四衣装","文魂(大)"],
+          datasets: [{
+            data: [84,53,12, 100],
+            backgroundColor: [
+              '#8bc34a',
+              '#ffd54f',
+              '#e57373',
+              '#4db6ac'
+            ]
+          }]
+        },
+        options: graphOption
+      });
+    </script>
   </body>
 </html>

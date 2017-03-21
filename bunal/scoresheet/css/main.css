@@ -33,10 +33,15 @@ section {
 .tabs .tab a.active#chara-38 {
   background-color  : #ef9a9a;
 }
-section h2.header {
-  font-size : 2.56rem;
+section h2.header, section h3.header {
   padding : .56rem;
   border-bottom : solid 1px #d7ccc8;
+}
+section h2.header {
+  font-size : 2.56rem;
+}
+section h3.header {
+  font-size : 1.56rem;
 }
 .progress dt {
   float : left;
@@ -53,4 +58,9 @@ section h2.header {
   border-radius:6px;
   /* border */
   border:1px solid #b0bec5;
+}
+.input-field select {
+  width: 40px;
+}
+.add-score {
 }
