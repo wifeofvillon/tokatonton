@@ -12,6 +12,30 @@ This is a web application to support playing the event of "Great Writers and Alc
 - [Materialize ver.0.98.0](http://materializecss.com/)
 - [Chart.js ver.2.5.0](http://www.chartjs.org/)
 - [jQuery ver.2.1.1](https://jquery.com/)
+- [jQuery.cookie ver.1.4.1](https://github.com/carhartl/jquery-cookie)
+
+## Cookie Specification
+
+|param  |value                        |
+|:------|:----------------------------|
+|key    |wovbunalsc                   |
+|value  |(Described below)            |
+|expires|Fri, 23 Mar 2018 02:30:30 GMT|
+
+### Structure of cookie-value
+
+```js
+{
+  "last": character.id,
+  [
+    {
+      "id": character.id,
+      "score": number
+    }
+    ...
+  ]
+}
+```
 
 ## Author
 
