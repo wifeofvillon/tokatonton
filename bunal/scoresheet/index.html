@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>【非公式】文アル「学問ノススメ」成績表</title>
+    <title>【非公式】文アル「学問ノススメ〈桜〉」成績表</title>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
@@ -12,7 +12,7 @@
   </head>
   <body>
     <nav class="nav-wrapper">
-      <a href="./" class="bland-logo">「学問ノススメ」成績表</a>
+      <a href="./" class="bland-logo">「学問ノススメ〈桜〉」成績表</a>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down" id="nav-pc">
         <li><a href="#disclaimer">免責事項</a></li>
@@ -24,9 +24,9 @@
       </ul>
     </nav>
     <ul class="tabs">
-      <li class="tab"><a href="#" id="chara-10" class="active">島崎藤村</a></li>
+      <li class="tab" class="active"><a href="#" id="chara-38">国木田独歩</a></li>
       <li class="tab"><a href="#" id="chara-11">田山花袋</a></li>
-      <li class="tab"><a href="#" id="chara-38">国木田独歩</a></li>
+      <li class="tab"><a href="#" id="chara-10">島崎藤村</a></li>
     </ul>
     <section id="main">
       <h2 class="header">島崎藤村</h2>
@@ -39,6 +39,11 @@
                 <select class="browser-default col" name="point-3st" id="point-3st">
                   <option value="0">0</option>
                   <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
                 </select>
                 <select class="browser-default col" name="point-2st" id="point-2st">
                   <option value="0">0</option>
@@ -67,7 +72,9 @@
               </div>
             </div>
             <p class="col">
-              <i class="material-icons">input</i>
+              <button class="btn waves-effect waves-light" type="submit" name="action">add
+  <i class="material-icons right">input</i>
+</button>
             </p>
             <div class="total-score col">
               <p>合計得点</p>
@@ -117,7 +124,7 @@
           </form>
         </div>
       </div>
-      <canvas id="graph"></canvas>
+      <canvas id="graph" height="54"></canvas>
     </section>
     <section id="disclaimer">
       <h2 class="header">免責事項</h2>

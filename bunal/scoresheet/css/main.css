@@ -59,6 +59,8 @@ section h3.header {
   /* border */
   border:1px solid #b0bec5;
 }
+.input-area {
+}
 .input-field select {
   width: 40px;
 }
