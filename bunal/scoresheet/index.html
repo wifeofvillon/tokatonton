@@ -152,28 +152,6 @@
     <script type="text/javascript" src="./js/master.js"></script>
     <script type="text/javascript" src="./js/graph.js"></script>
     <script type="text/javascript" src="./js/cookie.js"></script>
-    <script type="text/javascript">
-      $(function(){
-        console.log(master.character[0].name);
-        $('select').material_select();
-      });
-      var ctx = document.getElementById("graph");
-      var myChart = new Chart(ctx, {
-        type: 'horizontalBar',
-        data: {
-          labels: ["想魂(大)","語魂(大)","島崎藤村第四衣装","文魂(大)"],
-          datasets: [{
-            data: [84,53,12, 100],
-            backgroundColor: [
-              '#8bc34a',
-              '#ffd54f',
-              '#e57373',
-              '#4db6ac'
-            ]
-          }]
-        },
-        options: graphOption
-      });
-    </script>
+    <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>

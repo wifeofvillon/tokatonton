@@ -31,6 +31,13 @@ This is a web application to support playing the event of "Great Writers and Alc
     {
       "id": character.id,
       "score": number
+      "reward": [
+        {
+          "score":number,
+          "item":string
+        }
+        ...
+      ]
     }
     ...
   ]

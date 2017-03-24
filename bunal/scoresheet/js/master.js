@@ -1,4 +1,4 @@
-var master = {
+const master = {
   "character": [
     {
       "id": 38,
