@@ -14,9 +14,6 @@ var graphOption = {
           return value + "%";
         }
       }
-    }],
-    yAxes: [{
-      barThickness: 24
     }]
   }
-}
+};
