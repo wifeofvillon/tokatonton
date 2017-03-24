@@ -42,10 +42,33 @@ var SCCookie = function(key, prop){
   }
 };
 
-// test
-var testScc = new SCCookie('testCookieKey',{expires:1});
-console.log(testScc.read());
-console.log(testScc.write('testCookieString'));
-console.log(testScc.read());
-console.log(testScc.write({"key":"value"}));
-console.log(testScc.read());
+/**
+ * Class ParseCookie
+ * @const json - JSON
+ */
+var ControllCookie = function(json){
+  this.json = json;
+
+  /**
+   * ParseCookie.getLastId
+   * @return id - Number
+   */
+  this.getLastId = function(){
+    return this.json.last;
+  }
+
+   /**
+    * ParseCookie.getScore
+    * @param  id - Number
+    * @return score - Number
+    */
+  this.getScore = function(id){
+    for (var i = 0; i < json.characters.length; i++) {
+      console.log(json.characters[i]);
+      if(id === json.characters[i].id){
+        return json.characters[i].score;
+      }
+    }
+    return -1;
+  }
+};

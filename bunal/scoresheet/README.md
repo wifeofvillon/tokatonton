@@ -27,7 +27,7 @@ This is a web application to support playing the event of "Great Writers and Alc
 ```js
 {
   "last": character.id,
-  [
+  "characters": [
     {
       "id": character.id,
       "score": number
