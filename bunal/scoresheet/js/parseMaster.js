@@ -41,25 +41,29 @@ var ParseMaster = function(id){
       "data":[],
       "bgColor":[]
     };
-
+console.log(reward);
     for (var i = 0; i < reward.length; i++) {
       var r = reward[i];
       var label = getLabel(r.score, r.item);
       if(score < r.score){
+        // Not Achiebved
         sortedReward.label.push(label);
         data = getPercentage(score, r.score);
         sortedReward.data.push(data);
-        sortedReward.bgColor.push(getBgColor(data))
+        sortedReward.bgColor.push(getBgColor(data));
       } else {
+        // Achieved
         tmpHash.label.push(label);
         tmpHash.data.push(100);
         tmpHash.bgColor.push(master.graphfill[3].color);
       }
     }
 
-    newHash.label = sortedReward.label.concat(tmpHash.label);
-    newHash.data = sortedReward.data.concat(tmpHash.data);
-    newHash.bgColor = sortedReward.bgColor.concat(tmpHash.bgColor);
+    newHash = {
+      "label": sortedReward.label.concat(tmpHash.label),
+      "data": sortedReward.data.concat(tmpHash.data),
+      "bgColor": sortedReward.bgColor.concat(tmpHash.bgColor)
+    };
 
     return newHash;
 

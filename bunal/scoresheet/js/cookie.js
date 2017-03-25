@@ -1,6 +1,4 @@
-const wovKey = "wovbunalsc";
 const wovExpires = 365;
-const wovCookieProp = {expires:wovExpires};
 
 /**
  * Class SCCookie
@@ -46,7 +44,7 @@ var SCCookie = function(key, prop){
  * Class ParseCookie
  * @const json - JSON
  */
-var ControllCookie = function(json){
+var ParseCookie = function(json){
   this.json = json;
 
   /**
@@ -63,10 +61,9 @@ var ControllCookie = function(json){
     * @return score - Number
     */
   this.getScore = function(id){
-    for (var i = 0; i < json.characters.length; i++) {
-      console.log(json.characters[i]);
-      if(id === json.characters[i].id){
-        return json.characters[i].score;
+    for (var i = 0; i < json.character.length; i++) {
+      if(id === json.character[i].id){
+        return json.character[i].score;
       }
     }
     return -1;
