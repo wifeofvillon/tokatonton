@@ -46,25 +46,33 @@ This is a web application to support playing the event of "Great Writers and Alc
 
 ### Structure of character-value
 
-|param |value                 |
-|:-----|:---------------------|
-|id    |character.id          |
-|name  |character.name        |
-|reward|Array(Described below)|
-
-#### Structure of reward-value
-
-|param|value  |
-|:----|:------|
-|score|Numeber|
-|item |String |
-
+```js
+[
+  {
+    "id": character.id,
+    "name": character.name,
+    "reward": [
+      {
+        "score": Number,
+        "item": String
+      },
+      ...
+    ]
+  },
+  ...
+]
+```
 ### Structure of graphfill-value
 
-|param |value                 |
-|:-----|:---------------------|
-|border|Number|
-|color |String(Color Hex)|
+```js
+[
+  {
+    "border": Number, // score border
+    "color": String // color hex
+  },
+  ...
+]
+```
 
 ## Author
 
