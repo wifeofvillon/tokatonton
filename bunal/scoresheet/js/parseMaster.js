@@ -41,7 +41,7 @@ var ParseMaster = function(id){
       "data":[],
       "bgColor":[]
     };
-console.log(reward);
+
     for (var i = 0; i < reward.length; i++) {
       var r = reward[i];
       var label = getLabel(r.score, r.item);

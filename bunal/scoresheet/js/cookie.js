@@ -55,11 +55,11 @@ var ParseCookie = function(json){
     return this.json.last;
   }
 
-   /**
-    * ParseCookie.getScore
-    * @param  id - Number
-    * @return score - Number
-    */
+  /**
+   * ParseCookie.getScore
+   * @param  id - Number
+   * @return score - Number
+   */
   this.getScore = function(id){
     for (var i = 0; i < json.character.length; i++) {
       if(id === json.character[i].id){
