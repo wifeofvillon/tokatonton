@@ -1,11 +1,14 @@
 nav {
   background-color  : #795548;
 }
+nav.nav-wrapper div.chip {
+  margin-left: 8px;
+}
 .tabs {
   background-color  : #8d6e63;
 }
 section {
-  max-width : 1080px;
+  max-width : 990px;
   margin: 1rem auto;
 }
 .header {
@@ -64,5 +67,7 @@ section h3.header {
 .input-field select {
   width: 40px;
 }
-.add-score {
+#add-button {
+  padding: 0 16px;
+  border-radius: 4px;
 }

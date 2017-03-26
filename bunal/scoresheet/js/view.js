@@ -30,27 +30,28 @@ var ControllMainView = function(){
    */
   this.setCharaName = function(name){
     if(name.length == 0) return false;
-    $('h2.header').text(name);
+    $('section#main h2.header').text(name);
     return true;
   };
 
   /**
-   * ControllMainView.setScore
-   * @param score - Number
-   * @return result - Boolean
+   * setScore
+   * @param score {Number} score
+   * @return result {Boolean}
    */
   this.setSelectBox = function(score){
     // error check
     if(score < 0) return false;
     // score to string
-    var scoreString = ('000' + score).slice(-4);
+    var scoreString = ('0000' + score).slice(-5);
     // reset selectbox
     $('.total-score select option').removeAttr('selected');
     // select score
-    $('#total-4 option:eq(' + scoreString.slice(0,1) + ')').attr('selected', 'selected');
-    $('#total-3 option:eq(' + scoreString.slice(1,2) + ')').attr('selected', 'selected');
-    $('#total-2 option:eq(' + scoreString.slice(2,3) + ')').attr('selected', 'selected');
-    $('#total-1 option:eq(' + scoreString.slice(3,4) + ')').attr('selected', 'selected');
+    $('#total-5 option:eq(' + scoreString.slice(0,1) + ')').attr('selected', 'selected');
+    $('#total-4 option:eq(' + scoreString.slice(1,2) + ')').attr('selected', 'selected');
+    $('#total-3 option:eq(' + scoreString.slice(2,3) + ')').attr('selected', 'selected');
+    $('#total-2 option:eq(' + scoreString.slice(3,4) + ')').attr('selected', 'selected');
+    $('#total-1 option:eq(' + scoreString.slice(4,5) + ')').attr('selected', 'selected');
     return true;
   };
 
@@ -83,7 +84,7 @@ var ControllMainView = function(){
    * @return result - Boolean
    */
   this.drawGraph = function(canvas, reward, option){
-    if(!canvas || typeof(reward) == 'undefined' || typeof(option) == 'undefined') return false;
+    if(!canvas || typeof(reward) == 'undefined' || typeof(option) == 'undefined') return {'error':"It's parameter error."};
 
     var graph = new Chart(canvas, {
       type: 'horizontalBar',
@@ -97,7 +98,29 @@ var ControllMainView = function(){
       options: option
     });
 
-    return true;
+    return graph;
+  };
+
+  /**
+   * updateGraph
+   * @param graph {Object} - Chart Instance
+   * @param reward {Object} - Contain: label, data, bgColor
+   * @return graph {Object} - Chart Instance
+   */
+  this.updateGraph = function(graph, reward){
+    graph.labels = reward.label;
+    graph.data.datasets[0].data = reward.data;
+    graph.data.datasets[0].backgroundColor = reward.bgColor;
+    graph.update();
+    return graph;
+  };
+
+  /**
+   * destroyGraph
+   * @param graph {Object} - Chart Instance
+   */
+  this.destroyGraph = function(graph){
+    graph.destroy();
   };
 
   /**

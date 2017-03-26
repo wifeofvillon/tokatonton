@@ -19,10 +19,15 @@ var charaId; // Number: Character ID
 var charaScore; // Number: Character score
 var chara; // json
 var sortedReward; // json
+var graph; // Instance:Chart
 
 $(document).ready(function(){
   // activate selectbox
   $('select').material_select();
+  // activate sidebar
+  $('.button-collapse').sideNav();
+  // activate tips
+  $('.chips').material_chip();
 
   // main view controller
   cmv = new ControllMainView();
@@ -57,20 +62,21 @@ $(document).ready(function(){
     console.error('I cannot set ID');
   }
 
-  // rewrite character name
+  // initialize character name
   if(!cmv.setCharaName(chara.name)){
     console.error('I cannot get name.')
   }
 
-  // set selectbox
+  // initialize selectbox
   if(!cmv.setSelectBox(charaScore)){
     console.error('I cannot get score.');
   }
 
-  // rewrite graph
+  // initialize graph
   sortedReward = pm.sortReward(chara);
-  if(!cmv.drawGraph(wovCanvasObj, sortedReward, graphOption)){
-    console.error('I cannot draw graph.');
+  graph = cmv.drawGraph(wovCanvasObj, sortedReward, graphOption);
+  if(graph.error){
+    console.error(graph.error);
   }
 
   // add score
@@ -87,8 +93,9 @@ $(document).ready(function(){
     }
     chara.score = totalScore;
     sortedReward = pm.sortReward(chara);
-    if(!cmv.drawGraph(wovCanvasObj, sortedReward, graphOption)){
-      console.error('I cannot redraw graph.');
+    graph = cmv.updateGraph(graph, sortedReward);
+    if(graph.error){
+      console.error(graph.error);
     }
   });
 
@@ -103,8 +110,9 @@ $(document).ready(function(){
     }
     chara.score = totalScore;
     sortedReward = pm.sortReward(chara);
-    if(!cmv.drawGraph(wovCanvasObj, sortedReward, graphOption)){
-      console.error('I cannot redraw graph.');
+    graph = cmv.updateGraph(graph, sortedReward);
+    if(graph.error){
+      console.error(graph.error);
     }
   });
 
@@ -138,7 +146,7 @@ $(document).ready(function(){
       console.error('I cannot set ID');
     }
 
-    // rewrite character name
+    // initialize character name
     if(!cmv.setCharaName(chara.name)){
       console.error('I cannot get name.')
     }
@@ -150,8 +158,9 @@ $(document).ready(function(){
 
     // rewrite graph
     sortedReward = pm.sortReward(chara);
-    if(!cmv.drawGraph(wovCanvasObj, sortedReward, graphOption)){
-      console.error('I cannot draw graph.');
+    graph = cmv.updateGraph(graph, sortedReward);
+    if(graph.error){
+      console.error(graph.error);
     }
   });
 
