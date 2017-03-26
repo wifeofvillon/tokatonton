@@ -11,11 +11,11 @@ var ParseMaster = function(id){
    */
   this.getCharacter = function(){
     for (var i = 0; i < master.character.length; i++) {
-      if(master.character[i].id === this.id){
+      if(master.character[i].id == this.id){
         return master.character[i];
       }
     }
-    return {};
+    return {"error":"There are no character who has such id."};
   };
 
   /**

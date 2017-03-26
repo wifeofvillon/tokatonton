@@ -14,6 +14,15 @@ var ControllMainView = function(){
     $('#charaId').val(id);
     return true;
   };
+
+  /**
+   * ControllMainView.getCharaId
+   * @return id Number
+   */
+  this.getCharaId = function(){
+    return $('#charaId').val();
+  }
+
   /**
    * ControllMainView.setName
    * @param name - String
@@ -113,5 +122,14 @@ var ControllMainView = function(){
       }
     }
     return false;
+  };
+
+  /**
+   * controllTab
+   * @param id {Number} - Character ID
+   */
+  this.controllTab = function(id){
+    $('.tab a').removeAttr('class', 'active');
+    $('#chara-' + id).attr('class', 'active');
   };
 };

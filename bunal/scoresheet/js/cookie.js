@@ -61,8 +61,11 @@ var ParseCookie = function(json){
    * @return score - Number
    */
   this.getScore = function(id){
+    console.log(id);
+    console.log(json.character);
     for (var i = 0; i < json.character.length; i++) {
-      if(id === json.character[i].id){
+      console.log(json.character[i].id);
+      if(id == json.character[i].id){
         return json.character[i].score;
       }
     }

@@ -14,7 +14,9 @@ This is a web application to support playing the event of "Great Writers and Alc
 - [jQuery ver.2.1.1](https://jquery.com/)
 - [jQuery.cookie ver.1.4.1](https://github.com/carhartl/jquery-cookie)
 
-## Cookie Specification
+## Data Specification
+
+### Cookie Specification
 
 |param  |value                        |
 |:------|:----------------------------|
@@ -22,7 +24,7 @@ This is a web application to support playing the event of "Great Writers and Alc
 |value  |(Described below)            |
 |expires|Fri, 23 Mar 2018 02:30:30 GMT|
 
-### Structure of cookie-value
+#### Structure of cookie-value
 
 ```js
 {
@@ -37,14 +39,14 @@ This is a web application to support playing the event of "Great Writers and Alc
 }
 ```
 
-## Master Data Specification
+### Master Data Specification
 
 |param    |value                 |
 |:--------|:---------------------|
 |character|Array(Described below)|
 |graphfill|Array(Described below)|
 
-### Structure of character-value
+#### Structure of character-value
 
 ```js
 [
@@ -62,7 +64,7 @@ This is a web application to support playing the event of "Great Writers and Alc
   ...
 ]
 ```
-### Structure of graphfill-value
+#### Structure of graphfill-value
 
 ```js
 [
@@ -73,7 +75,6 @@ This is a web application to support playing the event of "Great Writers and Alc
   ...
 ]
 ```
-
 ## Author
 
 [@wifeofvillon](https://twitter.com/wifeofvillon)
