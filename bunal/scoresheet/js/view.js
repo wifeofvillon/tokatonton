@@ -119,7 +119,7 @@ var ControllMainView = function(){
    * @param graph {Object} - Chart Instance
    */
   this.destroyGraph = function(graph){
-    graph.destroy();
+    return graph.destroy();
   };
 
   /**
