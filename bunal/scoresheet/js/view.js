@@ -46,12 +46,11 @@ var ControllMainView = function(){
     var scoreString = ('0000' + score).slice(-5);
     // reset selectbox
     $('.total-score select option').removeAttr('selected');
-    // select score
-    $('#total-5 option:eq(' + scoreString.slice(0,1) + ')').attr('selected', 'selected');
-    $('#total-4 option:eq(' + scoreString.slice(1,2) + ')').attr('selected', 'selected');
-    $('#total-3 option:eq(' + scoreString.slice(2,3) + ')').attr('selected', 'selected');
-    $('#total-2 option:eq(' + scoreString.slice(3,4) + ')').attr('selected', 'selected');
-    $('#total-1 option:eq(' + scoreString.slice(4,5) + ')').attr('selected', 'selected');
+    $('#total-5 option:eq(' + scoreString.slice(0,1) + ')').prop('selected', true);
+    $('#total-4 option:eq(' + scoreString.slice(1,2) + ')').prop('selected', true);
+    $('#total-3 option:eq(' + scoreString.slice(2,3) + ')').prop('selected', true);
+    $('#total-2 option:eq(' + scoreString.slice(3,4) + ')').prop('selected', true);
+    $('#total-1 option:eq(' + scoreString.slice(4,5) + ')').prop('selected', true);
     return true;
   };
 
@@ -120,7 +119,7 @@ var ControllMainView = function(){
    * @param graph {Object} - Chart Instance
    */
   this.destroyGraph = function(graph){
-    graph.destroy();
+    return graph.destroy();
   };
 
   /**

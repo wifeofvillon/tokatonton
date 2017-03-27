@@ -93,7 +93,11 @@ $(document).ready(function(){
     }
     chara.score = totalScore;
     sortedReward = pm.sortReward(chara);
-    graph = cmv.updateGraph(graph, sortedReward);
+    // destroy old graph
+    graph = cmv.destroyGraph(graph);
+    // draw new graph
+    graph = cmv.drawGraph(wovCanvasObj, sortedReward, graphOption);
+    // graph = cmv.updateGraph(graph, sortedReward);
     if(graph.error){
       console.error(graph.error);
     }
@@ -101,7 +105,6 @@ $(document).ready(function(){
 
   // change total score
   $('#select-total select').change(function(){
-    console.log('select changed.');
     // get total score
     var totalScore = cmv.getScore('total');
     // set new cookie
@@ -110,7 +113,11 @@ $(document).ready(function(){
     }
     chara.score = totalScore;
     sortedReward = pm.sortReward(chara);
-    graph = cmv.updateGraph(graph, sortedReward);
+    // destroy old graph
+    graph = cmv.destroyGraph(graph);
+    // draw new graph
+    graph = cmv.drawGraph(wovCanvasObj, sortedReward, graphOption);
+    // graph = cmv.updateGraph(graph, sortedReward);
     if(graph.error){
       console.error(graph.error);
     }
@@ -158,7 +165,11 @@ $(document).ready(function(){
 
     // rewrite graph
     sortedReward = pm.sortReward(chara);
-    graph = cmv.updateGraph(graph, sortedReward);
+    // destroy old graph
+    graph = cmv.destroyGraph(graph);
+    // draw new graph
+    graph = cmv.drawGraph(wovCanvasObj, sortedReward, graphOption);
+    // graph = cmv.updateGraph(graph, sortedReward);
     if(graph.error){
       console.error(graph.error);
     }
@@ -169,5 +180,6 @@ $(document).ready(function(){
     console.info($.cookie(wovCookieKey));
     scc.write(wovCookieInit);
     console.info($.cookie(wovCookieKey));
+    location.reload();
   });
 });
