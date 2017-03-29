@@ -80,7 +80,10 @@ $(document).ready(function(){
   }
 
   // TODO: view history automatically
-  //cmv.viewHistory();
+  cmv.viewHistory();
+
+  // nav version chips
+  $('nav div.chip:eq(0)').text('var.' + appHistory[appHistory.length - 1].version);
 
   // add score
   $('#add-button').click(function(){
