@@ -79,6 +79,9 @@ $(document).ready(function(){
     console.error(graph.error);
   }
 
+  // TODO: view history automatically
+  //cmv.viewHistory();
+
   // add score
   $('#add-button').click(function(){
     var addScore = cmv.getScore('point');

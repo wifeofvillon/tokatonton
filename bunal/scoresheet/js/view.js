@@ -154,4 +154,26 @@ var ControllMainView = function(){
     $('.tab a').removeAttr('class', 'active');
     $('#chara-' + id).attr('class', 'active');
   };
+
+  /**
+   * viewHistory
+   */
+  this.viewHistory = function(){
+    var historyList = (typeof(appHistory) !== 'object' || appHistory.length == 0) ? '更新履歴はありません。' : getElement('ul',[{'name':'class', 'value':'collection'}]);
+    console.log(historyList);
+
+    /**
+     * getElement
+     * @param elem {String} element name
+     * @param innerText {String} innnerText
+     * @param attr {Array} attributes [{'name':'value'}]
+     * @return element {Object} element
+     */
+    function getElement(elem, innerText = '', attr = []){
+      var element = document.createElement(elem);
+      element.innerText = innerText;
+      element.attributes = attr;
+      return element;
+    }
+  };
 };
