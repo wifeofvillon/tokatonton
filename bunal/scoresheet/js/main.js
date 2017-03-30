@@ -79,16 +79,23 @@ $(document).ready(function(){
     console.error(graph.error);
   }
 
-  // TODO: view history automatically
+  // view history automatically
   cmv.viewHistory();
 
   // nav version chips
-  $('nav div.chip:eq(0)').text('var.' + appHistory[appHistory.length - 1].version);
+  var lastHistory = appHistory[0];
+  $('nav div.chip:eq(0)').text('var.' + lastHistory.version);
+  $('nav div.chip:eq(1)').text(lastHistory.date + ' updated')
 
   // add score
   $('#add-button').click(function(){
     var addScore = cmv.getScore('point');
     var totalScore = cmv.getScore('total');
+    // cat-paw(nomal)
+    if($('div.cat-normal div.switch input:checkbox:checked').length == 1) addScore = addScore * 2;
+    // cat-paw(gold)
+    if($('div.cat-gold div.switch input:checkbox:checked').length == 1) addScore = addScore * 3;
+    // add 'addScore' to 'totalScore'
     totalScore = totalScore + addScore;
     if(!cmv.setSelectBox(totalScore)){
       console.error('I cannot get score.');
