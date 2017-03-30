@@ -159,8 +159,23 @@ var ControllMainView = function(){
    * viewHistory
    */
   this.viewHistory = function(){
-    var historyList = (typeof(appHistory) !== 'object' || appHistory.length == 0) ? '更新履歴はありません。' : getElement('ul',[{'name':'class', 'value':'collection'}]);
-    console.log(historyList);
+    var historyUl = $('section#history ul.collection');
+    if(typeof(appHistory) !== 'object' || appHistory.length == 0){
+      historyUl.html('<li class="collection-item">更新履歴はありません</li>');
+    } else {
+      for (var i = 0; i < appHistory.length; i++) {
+        var ahHash = appHistory[i];
+        // create appHistory body
+        var ahBody = $('<ul></ul>');
+        for (var j = 0; j < ahHash.body.length; j++) {
+          ahBody.append('<li>' + ahHash.body[j] + '</li>');
+        }
+        // create appHistory item
+        var ahItem = $('<li class="collection-item"><div class="header"><span class="date right">' + ahHash.date + '</span><span class="title">ver.' + ahHash.version + '</span></div></li>');
+        ahItem.append(ahBody);
+        historyUl.append(ahItem);
+      }
+    }
 
     /**
      * getElement
