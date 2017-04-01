@@ -62,10 +62,11 @@ section h3.header {
   /* border */
   border:1px solid #b0bec5;
 }
-.input-area {
-}
 .input-field select {
   width: 40px;
+}
+.input-area form p.left {
+  margin: 24px 8px 0 0;
 }
 #add-button {
   padding: 0 16px;

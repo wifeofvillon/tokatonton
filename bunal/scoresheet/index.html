@@ -9,6 +9,27 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./favicon/favicon.ico">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="./favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="./favicon/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-160x160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-196x196.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#2d88ef">
+    <meta name="msapplication-TileImage" content="./favicon/mstile-144x144.png">
   </head>
   <body>
 <script>
@@ -23,8 +44,8 @@
 </script>
     <nav class="nav-wrapper">
       <a href="./" class="bland-logo">「學問ノスゝメ〈桜〉」成績表</a>
-      <div class="chip brown lighten-2 white-text">ver.1.0.0</div>
-      <div class="chip brown lighten-2 white-text">2017.03.26 released</div>
+      <div class="chip brown lighten-2 white-text"></div>
+      <div class="chip brown lighten-2 white-text"></div>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down" id="nav-pc">
         <li><a href="#" class="reset-cookie">Cookie削除</a></li>
@@ -48,10 +69,35 @@
       <h2 class="header"></h2>
       <input type="hidden" id="charaId" value="">
       <div class="input-area">
+        <!-- Switch -->
+        <div class="row">
+          <div class="cat-normal col s2">
+            <img class="cat-paw" src="./img/cat-paw_red.png" title="猫の手(追加得点2倍)">
+            <div class="switch right">
+              <label>
+                off
+                <input type="checkbox">
+                <span class="lever"></span>
+                On
+              </label>
+            </div>
+          </div>
+          <div class="cat-gold col s2">
+            <img class="cat-paw" src="./img/cat-paw_yellow.png" title="金の猫の手(追加得点3倍)">
+            <div class="switch right">
+              <label>
+                off
+                <input type="checkbox">
+                <span class="lever"></span>
+                On
+              </label>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <form class="" action="index.html" method="post">
-            <div class="add-score col">
-              <p>追加得点</p>
+            <div class="add-score col s3">
+              <p class="left">追加得点</p>
               <div class="input-field" id="select-point">
                 <select class="browser-default col" name="point-3" id="point-3">
                   <option value="0">0</option>
@@ -91,13 +137,13 @@
                 </select>
               </div>
             </div>
-            <p class="col">
+            <div class="col s1">
               <a href="#" class="btn btn-large  waves-effect waves-light brown lighten-2" id="add-button">
                 <i class="material-icons">add</i>
               </a>
-            </p>
-            <div class="total-score col">
-              <p>合計得点</p>
+            </div>
+            <div class="total-score col s4">
+              <p class="left">合計得点</p>
               <div class="input-field" id="select-total">
                 <select class="browser-default col" name="total-5" id="total-5">
                   <option value="0">0</option>
@@ -161,25 +207,7 @@
     <section id="history">
       <h2 class="header">更新履歴</h2>
       <div class="row">
-        <ul class="collection col s8">
-          <li class="collection-item">
-            <div class="header">
-              <span class="date right">2017.03.29</span>
-              <span class="title">ver.1.0.1</span>
-            </div>
-            <ul>
-              <li>「更新履歴」追加</li>
-              <li>「追加得点」上限引き上げ(699→999)</li>
-            </ul>
-          </li>
-          <li class="collection-item">
-            <div class="header">
-              <span class="date right">2017.03.26</span>
-              <span class="title">ver.1.0.0</span>
-            </div>
-            <p>アプリケーション公開</p>
-          </li>
-        </ul>
+        <ul class="collection col s8"></ul>
         <div class="col s4">
           <a class="twitter-moment" href="https://twitter.com/i/moments/845962248690421760" data-limit="1" data-width="280">成績表Webアプリ開発状況</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
