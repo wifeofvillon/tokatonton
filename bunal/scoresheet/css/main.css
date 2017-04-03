@@ -72,3 +72,12 @@ section h3.header {
   padding: 0 16px;
   border-radius: 4px;
 }
+div.cat-normal, div.cat-gold {
+  width: 160px;
+}
+div.add-score {
+  width: 260px;
+}
+div.total-score {
+  width: 380px;
+}

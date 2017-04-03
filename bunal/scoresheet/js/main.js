@@ -9,6 +9,8 @@ const wovCookieInit = {
   ]
 };
 const wovCanvasObj = $('#graph');
+const wovScreenWidth = 601;
+const wovCanvasHeight = 990;
 
 var cmv; // Instance: ControllMainView
 var scc; // Instance: SCCookie
@@ -84,8 +86,8 @@ $(document).ready(function(){
 
   // nav version chips
   var lastHistory = appHistory[0];
-  $('nav div.chip:eq(0)').text('var.' + lastHistory.version);
-  $('nav div.chip:eq(1)').text(lastHistory.date + ' updated')
+  $('nav div.chip:eq(0),nav div.chip:eq(2)').text('var.' + lastHistory.version);
+  $('nav div.chip:eq(1),nav div.chip:eq(3)').text(lastHistory.date + ' updated')
 
   // add score
   $('#add-button').click(function(){
