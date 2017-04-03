@@ -1,5 +1,13 @@
 const appHistory = [
   {
+    "date": "2017.04.03",
+    "version": "1.2.0",
+    "type": "enhancement",
+    "body": [
+      "モバイル表示対応"
+    ]
+  },
+  {
     "date": "2017.04.02",
     "version": "1.1.1",
     "type": "bug",
