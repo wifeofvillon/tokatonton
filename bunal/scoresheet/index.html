@@ -44,16 +44,22 @@
 </script>
     <nav class="nav-wrapper">
       <a href="./" class="bland-logo">「學問ノスゝメ〈桜〉」成績表</a>
-      <div class="chip brown lighten-2 white-text"></div>
-      <div class="chip brown lighten-2 white-text"></div>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down" id="nav-pc">
+        <li>
+          <div class="chip brown lighten-2 white-text"></div>
+          <div class="chip brown lighten-2 white-text"></div>
+        </li>
         <li><a href="#" class="reset-cookie">Cookie削除</a></li>
         <li><a href="#history">更新履歴</a></li>
         <li><a href="#disclaimer">免責事項</a></li>
         <li><a href="#contact">問い合わせ</a></li>
       </ul>
       <ul class="side-nav" id="nav-mobile">
+        <li>
+          <div class="chip brown lighten-2 white-text"></div>
+          <div class="chip brown lighten-2 white-text"></div>
+        </li>
         <li><a href="#" class="reset-cookie">Cookie削除</a></li>
         <li><a href="#history">更新履歴</a></li>
         <li><a href="#disclaimer">免責事項</a></li>
@@ -71,7 +77,7 @@
       <div class="input-area">
         <!-- Switch -->
         <div class="row">
-          <div class="cat-normal col s2">
+          <div class="cat-normal col">
             <img class="cat-paw" src="./img/cat-paw_red.png" title="猫の手(追加得点2倍)">
             <div class="switch right">
               <label>
@@ -82,7 +88,7 @@
               </label>
             </div>
           </div>
-          <div class="cat-gold col s2">
+          <div class="cat-gold col">
             <img class="cat-paw" src="./img/cat-paw_yellow.png" title="金の猫の手(追加得点3倍)">
             <div class="switch right">
               <label>
@@ -96,7 +102,7 @@
         </div>
         <div class="row">
           <form class="" action="index.html" method="post">
-            <div class="add-score col s4">
+            <div class="add-score col">
               <p class="left">追加得点</p>
               <div class="input-field" id="select-point">
                 <select class="browser-default col" name="point-3" id="point-3">
@@ -142,7 +148,7 @@
                 <i class="material-icons">add</i>
               </a>
             </div>
-            <div class="total-score col s5">
+            <div class="total-score col">
               <p class="left">合計得点</p>
               <div class="input-field" id="select-total">
                 <select class="browser-default col" name="total-5" id="total-5">
@@ -202,7 +208,7 @@
           </form>
         </div>
       </div>
-      <canvas id="graph"></canvas>
+      <canvas id="graph" width="990" height="1020"></canvas>
     </section>
     <section id="history">
       <h2 class="header">更新履歴</h2>
