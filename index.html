@@ -5,10 +5,8 @@
     <title>トカトントン - 実験工房</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-    <script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
@@ -24,36 +22,71 @@
 
     </script>
     <nav class="nav-wrapper pink darken-3">
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <a href="/" class="bland-logo">トカトントン - 実験工房</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <a href="#" data-activates="nav-mobile" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+      <a href="/tokatonton/" class="bland-logo">
+        トカトントン - 実験工房
+      </a>
+      <ul id="nav-pc" class="right hide-on-med-and-down">
         <li><a href="//twitter.com/wifeofvillon">Twitter</a></li>
         <li><a href="//github.com/wifeofvillon">GitHub</a></li>
+        <li><a href="//qiita.com/wifeofvillon">Qiita</a></li>
+        <li><a href="//wifeofvillon.hatenablog.com">Blog</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="//twitter.com/wifeofvillon">Twitter</a></li>
+        <li><a href="//github.com/wifeofvillon">GitHub</a></li>
+        <li><a href="//qiita.com/wifeofvillon">Qiita</a></li>
         <li><a href="//wifeofvillon.hatenablog.com">Blog</a></li>
       </ul>
     </nav>
     <div class="container">
       <section class="row">
-<!--
         <div class="header">
           <h2>「文豪とアルケミスト」関連(非公式)</h2>
         </div>
--->
-        <article class="card small col s4">
-          <div class="card-image">
-            <img src="image/project-bunal01.png" alt="" />
-            <span class="card-title">「学問ノススメ」成績表</span>
-          </div>
-          <div class="card-content">
-            <p>
-              イベント進捗を視覚化(Cookie使用)
+        <article class="card">
+          <div class="card-content row">
+            <div class="col s1">
+              <img src="./bunal/scoresheet/favicon/favicon-48x48.png" />
+            </div>
+            <div class="col s11">
+              <span class="card-title">
+                「学問ノススメ」成績表
+              </span>
+              <p class="description">
+                イベント進捗を視覚化(Cookie使用)
+              </p>
+              <ul class="feature">
+                <li class="chip">jQuery</li>
+                <li class="chip">jQuery.cookie</li>
+                <li class="chip">Chart.js</li>
+                <li class="chip">Materialize</li>
+              </ul>
+              <p class="release">
+                2017.03.29 released
+              </div>
             </p>
           </div>
           <div class="card-action">
-            <a href="bunal/scoresheet/">「学問ノススメ」成績表</a>
+            <a href="./bunal/scoresheet/" target="_blank">「学問ノススメ」成績表<i class="material-icons tiny">open_in_new</i></a>
+            <a href="//github.com/wifeofvillon/tokatonton/tree/master/bunal/scoresheet" target="_blank">Source<i class="material-icons tiny">open_in_new</i></a>
           </div>
         </article>
       </section>
     </div>
+<!--
+    <footer class="page-footer pink darken-3">
+      <div class="footer-copyright darken-4">
+        <div class="container">
+          © 2017 @wifeofvillon
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      $(".button-collapse").sideNav();
+    </script>
+-->
   </body>
 </html>

@@ -1,0 +1,10 @@
+section div.header h2 {
+  font-size: 2rem;
+  color: #ad1457;
+}
+article.card div.card-content.row {
+  margin-bottom: 0px;
+}
+article.card .last-update > span {
+  margin-right: 0.4rem;
+}
