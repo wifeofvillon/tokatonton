@@ -1,71 +1,38 @@
-const wovExpires = 365;
-
 /**
- * Class SCCookie
- * depend on jQuery.cookie
- * @const key - String
- * @const prop - Object
+ * depend on js-cookie.js
+ * @constructor
+ * @param {String} key - Cookie key
+ * @param {json} prop - Cookie property
  */
-var SCCookie = function(key, prop){
-  $.cookie.json = true;
-  this.key = key;
-  this.prop = prop;
-
-  /**
-   * SCCookie.read
-   * @param key - String
-   * @return  value - String
-   */
-  this.read = function(){
-    return $.cookie(this.key);
-  };
-
-  /**
-   * SCCookie.write
-   * @param key - String
-   * @param value - String or json
-   * @param prop  - Object
-   * @return
-   */
-  this.write = function(value){
-    return $.cookie(this.key, value, this.prop);
-  };
-
-  /**
-   * SCCookie.remove
-   * @param key - String
-   */
-  this.remove = function(){
-    return $.removeCookie(this.key);
-  }
-};
-
-/**
- * Class ParseCookie
- * @const json - JSON
- */
-var ParseCookie = function(json){
-  this.json = json;
-
-  /**
-   * ParseCookie.getLastId
-   * @return id - Number
-   */
-  this.getLastId = function(){
-    return this.json.last;
+class WovCookie {
+  constructor(key, prop) {
+    this.key = key;
+    this.prop = prop || {};
   }
 
   /**
-   * ParseCookie.getScore
-   * @param  id - Number
-   * @return score - Number
+   * @return {json} value Cookie value
    */
-  this.getScore = function(id){
-    for (var i = 0; i < json.character.length; i++) {
-      if(id == json.character[i].id){
-        return json.character[i].score;
-      }
-    }
-    return -1;
+  read(){
+    return Cookies.getJSON(this.key);
   }
-};
+
+  /**
+   * @param {json} value Cookie value
+   * @return {}
+   */
+  write(value){
+    return Cookies.set(this.key, value, this.prop);
+  }
+
+  /**
+   * @return {}
+   */
+  remove(){
+    return Cookies.remove(this.key);
+  }
+}
+
+(function(){
+
+})();

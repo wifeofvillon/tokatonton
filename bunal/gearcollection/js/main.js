@@ -1,20 +1,5 @@
-const wovCookieKey = "wovbunalsc";
-const wovCookieProp = {expires:wovExpires};
-const wovCookieInit = {
-  "last": master.character[0].id,
-  "character": [
-    {"id": master.character[0].id, "score": 0},
-    {"id": master.character[1].id, "score": 0},
-    {"id": master.character[2].id, "score": 0}
-  ]
-};
-const wovCanvasObj = $('#graph');
-const wovScreenWidth = 601;
-const wovCanvasHeight = 990;
-
-var cmv; // Instance: ControllMainView
-var scc; // Instance: SCCookie
-var pc; // Instance: ParseCookie
+let cmv; // Instance: ControllMainView
+let wc; // Instance: WovCookie
 var pm; // Instance: ParseMaster
 var cookieVal; // json
 var charaId; // Number: Character ID
@@ -35,11 +20,11 @@ $(document).ready(function(){
   cmv = new ControllMainView();
 
   // read cookie
-  scc = new SCCookie(wovCookieKey, wovCookieProp);
-  cookieVal = scc.read();
+  scc = new WovCookie(wovCookieKey, wovCookieProp);
+  cookieVal = wc.read();
   // first access
   if(typeof(cookieVal) == "undefined"){
-    scc.write(wovCookieInit);
+    wc.write(wovCookieInit);
     cookieVal = wovCookieInit;
   }
 
