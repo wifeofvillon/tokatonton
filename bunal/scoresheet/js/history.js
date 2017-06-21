@@ -1,5 +1,14 @@
 const appHistory = [
   {
+    "date": "2017.06.21",
+    "version": "2.0.0",
+    "type": "newrelease",
+    "body": [
+      "「カフェ・ロワイヤルの血戦」に合わせデータ修正",
+      "Cookie仕様変更"
+    ]
+  },
+  {
     "date": "2017.04.03",
     "version": "1.2.0",
     "type": "enhancement",

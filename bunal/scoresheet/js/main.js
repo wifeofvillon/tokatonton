@@ -6,7 +6,8 @@ const wovCookieInit = {
     {"id": master.character[0].id, "score": 0},
     {"id": master.character[1].id, "score": 0},
     {"id": master.character[2].id, "score": 0}
-  ]
+  ],
+  "version": appHistory[0].version.slice(0,1)
 };
 const wovCanvasObj = $('#graph');
 const wovScreenWidth = 601;
@@ -38,10 +39,14 @@ $(document).ready(function(){
   scc = new SCCookie(wovCookieKey, wovCookieProp);
   cookieVal = scc.read();
   // first access
-  if(typeof(cookieVal) == "undefined"){
+  if(typeof(cookieVal) == "undefined"
+    || typeof(cookieVal.version) == "undefined"
+    || cookieVal.version != appHistory[0].version.slice(0,1)){
+      console.warn('Cookie data is old version.');
     scc.write(wovCookieInit);
     cookieVal = wovCookieInit;
   }
+  console.log(cookieVal);
 
   // parse cookie data
   pc = new ParseCookie(cookieVal);
@@ -141,7 +146,8 @@ $(document).ready(function(){
   // change tab
   $('.tab a').not('.active').click(function(event){
     // get new cookie
-    charaId = event.target.id.slice(-2);
+    console.log(event.target.id);
+    charaId = event.target.id.replace('chara-', '');
 
     // controll tab
     cmv.controllTab(charaId);
