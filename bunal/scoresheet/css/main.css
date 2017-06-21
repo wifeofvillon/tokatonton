@@ -27,14 +27,14 @@ section {
   color: #fff;
   font-weight: 600;
 }
-.tabs .tab a.active#chara-10 {
-  background-color  : #b39ddb;
+.tabs .tab a.active#chara-9 {
+  background-color  : #7e57c2;
 }
-.tabs .tab a.active#chara-11 {
-  background-color  : #ffca28;
+.tabs .tab a.active#chara-30 {
+  background-color  : #b71c1c;
 }
-.tabs .tab a.active#chara-38 {
-  background-color  : #ef9a9a;
+.tabs .tab a.active#chara-31 {
+  background-color  : #03a9f4;
 }
 section h2.header, section h3.header {
   padding : .56rem;
