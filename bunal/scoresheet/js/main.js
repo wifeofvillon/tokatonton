@@ -146,7 +146,6 @@ $(document).ready(function(){
   // change tab
   $('.tab a').not('.active').click(function(event){
     // get new cookie
-    console.log(event.target.id);
     charaId = event.target.id.replace('chara-', '');
 
     // controll tab
