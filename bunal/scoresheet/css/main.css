@@ -81,3 +81,13 @@ div.add-score {
 div.total-score {
   width: 380px;
 }
+div.btn__add-500 .btn, div.btn__tweet .btn {
+  padding: 0 16px;
+  border-radius: 4px;
+}
+div.btn__add-500 .btn i, div.btn__tweet .btn .btn i {
+  margin-right: 4px;
+}
+div.btn__tweet .btn {
+  background-color: #1b95e0;
+}

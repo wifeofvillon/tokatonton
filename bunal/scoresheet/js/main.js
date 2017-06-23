@@ -13,16 +13,16 @@ const wovCanvasObj = $('#graph');
 const wovScreenWidth = 601;
 const wovCanvasHeight = 990;
 
-var cmv; // Instance: ControllMainView
-var scc; // Instance: SCCookie
-var pc; // Instance: ParseCookie
-var pm; // Instance: ParseMaster
-var cookieVal; // json
-var charaId; // Number: Character ID
-var charaScore; // Number: Character score
-var chara; // json
-var sortedReward; // json
-var graph; // Instance:Chart
+let cmv; // Instance: ControllMainView
+let scc; // Instance: SCCookie
+let pc; // Instance: ParseCookie
+let pm; // Instance: ParseMaster
+let cookieVal; // json
+let charaId; // Number: Character ID
+let charaScore; // Number: Character score
+let chara; // json
+let sortedReward; // json
+let graph; // Instance:Chart
 
 $(document).ready(function(){
   // activate selectbox
@@ -46,7 +46,6 @@ $(document).ready(function(){
     scc.write(wovCookieInit);
     cookieVal = wovCookieInit;
   }
-  console.log(cookieVal);
 
   // parse cookie data
   pc = new ParseCookie(cookieVal);
