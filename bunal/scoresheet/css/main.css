@@ -27,14 +27,14 @@ section {
   color: #fff;
   font-weight: 600;
 }
-.tabs .tab a.active#chara-9 {
-  background-color  : #7e57c2;
+.tabs .tab a.active#chara-29 {
+  background-color  : #81d4fa;
 }
-.tabs .tab a.active#chara-30 {
-  background-color  : #b71c1c;
+.tabs .tab a.active#chara-52 {
+  background-color  : #00796b;
 }
-.tabs .tab a.active#chara-31 {
-  background-color  : #03a9f4;
+.tabs .tab a.active#chara-55 {
+  background-color  : #2e7d32;
 }
 section h2.header, section h3.header {
   padding : .56rem;
@@ -80,4 +80,14 @@ div.add-score {
 }
 div.total-score {
   width: 380px;
+}
+div.btn__add-500 .btn, div.btn__tweet .btn {
+  padding: 0 16px;
+  border-radius: 4px;
+}
+div.btn__add-500 .btn i, div.btn__tweet .btn .btn i {
+  margin-right: 4px;
+}
+div.btn__tweet .btn {
+  background-color: #1b95e0;
 }
