@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Single File - React</title>
+    <!-- react -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <h1>Example: Single File</h1>
+    <aside>
+      Based on <a target="_blank" href="https://reactjs.org/docs/hello-world.html">Hello World - React</a>
+    </aside>
+    <article class="hello-world">
+      <h2>Simple code</h2>
+      <div class="hello-world__main" id="helloWorld"></div>
+      <script type="text/babel">
+        ReactDOM.render(
+          <p>Hello, world!</p>,
+          document.getElementById('helloWorld')
+          // document.getElementsByClassName('hello-world__main')[0];
+        );
+      </script>
+    </article>
+    <article class="react-omponent">
+      <h2>Use React Component</h2>
+      <div id="reactComponent"></div>
+      <script type="text/babel">
+        function Button(){
+          return <button className="reactComponent__btn">Say Hello</button>;
+        }
+        ReactDOM.render(
+          <Button />,
+          document.getElementById('reactComponent'),
+          function() {
+            let btn = document.getElementsByClassName('reactComponent__btn')[0];
+            btn.addEventListener('click', function() {
+              alert('Hello!');
+            });
+          }
+        );
+      </script>
+    </article>
+  </body>
+</html>
