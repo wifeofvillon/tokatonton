@@ -53,6 +53,10 @@ const PRACTICE_FILES = [
   {
     file: 'introducing-jsx.html',
     date: 'Nov. 14, 2017'
+  },
+  {
+    file: 'rendering-elements.html',
+    date: 'Nov. 14, 2017'
   }
 ];
 
