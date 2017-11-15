@@ -9,11 +9,11 @@ const OFFICIAL_DOCS = [
   },
   {
     title: 'Rendering Elements - React',
-    url: 'https://reactjs.org/docs/components-and-props.html'
+    url: 'https://reactjs.org/docs/rendering-elements.html'
   },
   {
-    title: 'Composition vs Inheritance',
-    url: 'https://reactjs.org/docs/composition-vs-inheritance.html'
+    title: 'Components and Props - React',
+    url: 'https://reactjs.org/docs/components-and-props.html'
   },
   {
     title: 'State and Lifecycle - React',
@@ -57,6 +57,10 @@ const PRACTICE_FILES = [
   {
     file: 'rendering-elements.html',
     date: 'Nov. 14, 2017'
+  },
+  {
+    file: 'components-and-props.html',
+    date: 'Nov. 15, 2017'
   }
 ];
 

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Components and Props - React</title>
+    <!-- react -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <h1>Components and Props</h1>
+    <aside>
+      Based on <a target="_blank" href="https://reactjs.org/docs/components-and-props.html">Components and Props - React</a>
+    </aside>
+    <article class="functional-component">
+      <h2>Functional Components</h2>
+      <div id="functionalComponent"></div>
+      <script type="text/babel">
+        let props = {name: 'React'};
+        function SayHello (props) {
+          return <p>Hello, {props.name}</p>;
+        }
+        ReactDOM.render(SayHello(props), document.getElementById('functionalComponent'));
+      </script>
+    </article>
+    <article class="class-component">
+      <h2>Class Components</h2>
+      <div id="classComponent"></div>
+      <script type="text/babel">
+        class SayWelcome extends React.Component {
+          name = 'React.js';
+          render() {
+            return <p>Welcome to {this.name}</p>;
+          }
+        }
+        let sw = new SayWelcome();
+        sw.render();
+        ReactDOM.render(<SayWelcome />, document.getElementById('classComponent'));
+      </script>
+    </article>
+    <article class="composing-component">
+      <h2>Composing Components</h2>
+      <div id="composingComponent"></div>
+      <script type="text/babel">
+        function SayWelcomeTo(props) {
+          return <li>Welcome to, {props.name}</li>;
+        }
+        function App() {
+          return (
+            <ul>
+              <SayWelcomeTo name="JavaScript" />
+              <SayWelcomeTo name="CommonJS" />
+              <SayWelcomeTo name="ECMAScript6" />
+            </ul>
+          );
+        }
+        ReactDOM.render(<App />, document.getElementById('composingComponent'));
+      </script>
+    </article>
+    <!-- <article class="extracting-component">
+      <h2>Extracting Components</h2>
+      <div id="extractingComponent"></div>
+      <script type="text/babel">
+        function Comment(props) {
+          return (
+            <div className="comment">
+              <div className="comment__user-info">
+                <img className="Avatar"
+                  src={props.url}
+                  alt={props.name}
+                />
+                <div className="comment__user-info--name">
+                  {props.name}
+                </div>
+              </div>
+              <div className="comment__text">
+                {props.text}
+              </div>
+              <div className="comment__date">
+                {formatDate(props.date)}
+              </div>
+            </div>
+          );
+        }
+        let author = {
+          url:'https://pbs.twimg.com/profile_images/928541384205770752/cRhQtuF7_bigger.jpg',
+          name:'wifeofvillon'
+        };
+        ReactDom.render(
+          <Comment author={author} text="This is comment text." date={new Date()} />,
+          document.getElementById('extractingComponent')
+        );
+      </script>
+    </article> -->
+  </body>
+</html>
